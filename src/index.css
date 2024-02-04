@@ -1,0 +1,522 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap');
+
+/*Typography
+--------------------------------------------------------------*/
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+#root {
+	/* display: flex; */
+	align-items: center;
+	justify-content: center;
+	/* background: #FAFAFA; */
+	width: 100%;
+
+	overflow: hidden;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: 'Bricolage Grotesque', sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Bricolage Grotesque", serif;
+	letter-spacing: 2px;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+.fakeLink {
+	color: -webkit-link;
+	cursor: pointer;
+	text-decoration: underline;
+	background: none !important;
+	border: none;
+	cursor: pointer;
+}
+
+.fakeLink:hover {
+	font-weight: bold;
+}
+
+.nav-item {
+	list-style-type: none;
+}
+
+/* General button style */
+.btn {
+	border: none;
+	font-family: Menlo;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before {
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/* Icon separator */
+.btn-sep {
+	padding: 25px 60px 25px 120px;
+}
+
+.btn-sep:before {
+	background: rgba(0, 0, 0, 0.15);
+}
+
+/* Button 1 */
+.btn-1 {
+	background: #3498db;
+	color: #fff;
+}
+
+.btn-1:hover {
+	background: #2980b9;
+}
+
+.btn-1:active {
+	background: #2980b9;
+	top: 2px;
+}
+
+.btn-1:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 3;
+	font-size: 140%;
+	width: 60px;
+}
+
+/* Button 2 */
+.btn-2 {
+	background: #2ecc71;
+	color: #fff;
+}
+
+.btn-2:hover {
+	background: #27ae60;
+}
+
+.btn-2:active {
+	background: #27ae60;
+	top: 2px;
+}
+
+.btn-2:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 3;
+	font-size: 140%;
+	width: 60px;
+}
+
+/* Button 3 */
+.btn-3 {
+	background: #e74c3c;
+	color: #fff;
+}
+
+.btn-3:hover {
+	background: #c0392b;
+}
+
+.btn-3:active {
+	background: #c0392b;
+	top: 2px;
+}
+
+.btn-3:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 3;
+	font-size: 140%;
+	width: 60px;
+}
+
+/* Button 3 */
+.btn-4 {
+	background: #34495e;
+	color: #fff;
+}
+
+.btn-4:hover {
+	background: #2c3e50;
+}
+
+.btn-4:active {
+	background: #2c3e50;
+	top: 2px;
+}
+
+.btn-4:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 3;
+	font-size: 140%;
+	width: 60px;
+}
+
+/* Icons */
+
+.icon-send:before {
+	content: "🔓";
+}
+
+/* NEW CSS */
+
+/* RESET CSS FOR ALL ASSETS */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+.stickerListImg {
+	object-fit: scale-down;
+	width: 200px;
+	height: 200px;
+
+}
+
+.stickerList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.stickerContainer {
+	display: flex;
+	height: 200px;
+}
+
+.stickerContainerLeft {
+	margin-right: 1em;
+	display: flex;
+	align-self: center;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.stickerContainerRight {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.stickerName {
+	font-size: 2.5em;
+}
+
+.stickerFinishType {
+	font-size: 1.25em;
+}
+
+.stickerBtn {
+	border: none;
+	background: none;
+	text-align: left;
+	margin-left: 8px;
+}
+
+.stickerBtn:hover {
+	font-weight: bold;
+}
+
+.stickerBtnContainer {
+	display: flex;
+	flex-direction: column;
+	margin-top: 6px;
+	/* gap: 0.5em; */
+}
+
+.iconBtn {
+	display: flex;
+	align-items: center;
+	margin-top: 6px;
+}
+
+.updateIcon, .deleteIcon {
+	font-size: 22px;
+}
+
+/* Sticker Form CSS */
+.boxInput {
+	margin-bottom: 12px;
+}
+
+.boxInput>input {
+	padding: 6px;
+	margin: 0;
+	width: 338px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.boxDropdown {
+	margin-bottom: 12px;
+	display: flex;
+	flex-direction: column;
+}
+
+.boxDropdown>label {
+	margin-bottom: 6px;
+}
+
+.boxDropdown>select {
+	padding: 6px;
+	margin: 0;
+	width: 200px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.boxDropdown>input {
+	padding: 6px;
+	margin: 0;
+	width: 50px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.createButton {
+	background-color: #30266C;
+	color: white;
+	font-size: 24px;
+	padding: 12px 24px;
+	border-radius: 20px;
+	width: 322px;
+	box-shadow: 10px 10px black;
+}
+
+.stickerFormLayout {
+	/* height: 100vh; */
+	/* max-height: fit-content; */
+}
+
+.stickerFormLayout {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: auto;
+}
+
+.stickerListLayout {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	max-width: 1400px;
+	margin: auto;
+	justify-content: center;
+}
+
+.leftView {
+	box-sizing: border-box;
+	width: 50%;
+	padding-left: 15%;
+	padding-right: 10%;
+	padding-top: 100px;
+	max-width: 50%;
+}
+
+.rightView {
+	box-sizing: border-box;
+	/* height: 100vh; */
+	/* height: 100%; */
+}
+
+.rightImg {
+	width: 100%;
+	/* max-width: 500px; */
+	height: 100%;
+	object-fit: scale-down;
+}
+
+@media (max-width: 660px) {
+	.stickerFormLayout {
+		flex-direction: column;
+		align-items: start;
+	}
+
+	.leftView {
+		/* padding: 50px; */
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.rightImg {
+		width: 100%;
+	}
+
+	.boxInput>input {
+		width: 100%;
+	}
+	.createButton {
+		width: 100%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.stickerList {}
+
+	.leftView {
+		padding: 0 5%;
+		padding-bottom: 32px;
+	}
+
+	.rightView {
+		/* max-height: 100px; */
+	}
+
+	.boxInput>input {
+		width: 100%;
+	}
+	.createButton {
+		width: 100%;
+		font-size: 16px;
+	}
+}
+
+/* Sticker List CSS */
+
+@media (max-width: 1400px) {
+	.stickerListLayout {
+		display: flex;
+		justify-content: center;
+	}
+	.stickerList {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.stickerName {
+		font-size: 2em;
+	}
+}
+
+@media (max-width: 860px) {
+	.stickerListLayout {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+
+	}
+	.stickerList {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.stickerName {
+		font-size: 1.5em;
+	}
+	.stickerFinishType, .stickerBtn {
+		font-size: 1em;
+	}
+}
+
+
+/* NAVBAR CSS */
+.navbarContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 50px;
+	background-color: #fff;
+	color: black;
+	border-bottom: 1px solid black;
+}
+
+.menuLinks {
+	display: flex;
+	color: black;
+}
+
+.menuLinkItems {
+	color: black;
+	margin: 0px 16px;
+	text-decoration: none;
+}
+
+.menuLinkItems:hover {
+	font-weight: bold;
+}
+
+.logoutBtn {
+	/* background-color: #30266C; */
+	background-color: white;
+	color: #30266C;
+	font-size: 16px;
+	padding: 6px 12px;
+	border-radius: 20px;
+	box-shadow: 5px 5px black;
+}
+
+.logoutBtn:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+
+@media (max-width: 660px) {
+	.navbarContainer {
+		padding: 8px 12px;
+	}
+}
