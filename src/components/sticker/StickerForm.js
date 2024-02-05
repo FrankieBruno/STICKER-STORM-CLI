@@ -26,13 +26,6 @@ export const StickerForm = () => {
         the properties of this state variable, you need to
         provide some default values.
     */
-    const [currentSticker, setCurrentSticker] = useState({
-        name: "",
-        image: "",
-        finish_type: 0,
-        sticker_size: 0,
-        price: "",
-    });
 
     useEffect(() => {
         //in this section I am grabbing my sticker types from my StickerManager.js...//
