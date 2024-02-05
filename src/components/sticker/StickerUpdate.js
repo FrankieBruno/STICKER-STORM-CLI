@@ -46,7 +46,7 @@ export const StickerUpdate = () => {
                 finish_type: res.finish_type.id,
                 sticker_size: res.sticker_size.id
             }))
-    }, [])
+    }, [stickerId])
 
     const handleImgError = (e) => {
         e.stopPropagation();
@@ -121,7 +121,7 @@ export const StickerUpdate = () => {
                             {/* <option value=""></option> */}
                             {stickerSizes.map((stickerSize) => (
                                 <option key={stickerSize.id} value={stickerSize.id}>
-                                    {stickerSizes.find(i => i.id == stickerSize.id).sticker_size}
+                                    {stickerSizes.find(i => i.id === stickerSize.id).sticker_size}
                                 </option>
                             ))}
                         </select>

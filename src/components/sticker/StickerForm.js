@@ -40,7 +40,7 @@ export const StickerForm = () => {
         // TODO: Get all sticker, then set the state
         console.log(stickers);
         getStickers().then((res) => setStickers(res));
-    }, []);
+    }, [stickers]);
 
     useEffect(() => {
         //in this section I am grabbing my sticker types from my StickerManager.js...//
@@ -56,14 +56,6 @@ export const StickerForm = () => {
         getStickerSizes().then((res) => setStickerSizes(res));
     }, []);
 
-    const changeStickerState = (domEvent) => {
-        //this section is handling my change state, it is making a copy of my currentSticker objects above....//
-        //so that I can change them without affecting my original set of objects//
-        // TODO: Complete the onChange function
-        const copy = { ...currentSticker };
-        copy[domEvent.target.name] = domEvent.target.value;
-        setCurrentSticker(copy);
-    };
 
     const handleImgError = (e) => {
         e.stopPropagation();
@@ -139,7 +131,7 @@ export const StickerForm = () => {
                             {/* <option value=""></option> */}
                             {stickerSizes.map((stickerSize) => (
                                 <option key={stickerSize.id} value={stickerSize.id}>
-                                    {stickerSizes.find(i => i.id == stickerSize.id).sticker_size}
+                                    {stickerSizes.find(i => i.id === stickerSize.id).sticker_size}
                                 </option>
                             ))}
                         </select>
