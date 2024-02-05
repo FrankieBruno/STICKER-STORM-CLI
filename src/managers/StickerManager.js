@@ -47,6 +47,7 @@ export const getStickerSizes = () => {
 }
 
 
+
 export const updateSticker = (sticker,id) => {
     return fetch(`https://sticker-storm-server-bf6dcabdf16a.herokuapp.com/stickers/${id}`, {
         method: "PUT",
