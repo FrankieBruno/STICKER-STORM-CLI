@@ -248,7 +248,7 @@ svg {
 .stickerContainer {
 	display: flex;
 	height: 200px;
-	justify-content: space-around;
+	padding: 10px;
 }
 
 .stickerContainerLeft {
