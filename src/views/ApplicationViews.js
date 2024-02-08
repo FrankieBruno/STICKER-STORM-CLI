@@ -13,7 +13,7 @@ export const ApplicationViews = () => {
         <Route path="/stickers" element={<StickerList />} />
         <Route path="/stickers/new" element={<StickerForm />} />
         <Route path="/stickers/update/:stickerId" element={<StickerUpdate />} />
-        <Route path="/stickers" element={<Authorized />} />
+        <Route path="/" element={<Authorized />} />
     </Routes>;
 }
 
