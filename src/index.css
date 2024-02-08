@@ -238,7 +238,6 @@ svg {
 	object-fit: scale-down;
 	width: 200px;
 	height: 200px;
-	margin: 10px;
 }
 
 .stickerList {
@@ -249,6 +248,7 @@ svg {
 .stickerContainer {
 	display: flex;
 	height: 200px;
+	justify-content: space-around;
 }
 
 .stickerContainerLeft {
